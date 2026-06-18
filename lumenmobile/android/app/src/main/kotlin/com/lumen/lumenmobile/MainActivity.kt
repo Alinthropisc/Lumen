@@ -1,4 +1,4 @@
-package com.aio.aiomobile
+package com.lumen.lumenmobile
 
 import io.flutter.embedding.android.FlutterActivity
 

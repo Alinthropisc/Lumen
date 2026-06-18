@@ -3,8 +3,8 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'package:aiomobile/core/connectivity/connectivity_bloc.dart';
-import 'package:aiomobile/core/network/connectivity_service.dart';
+import 'package:lumenmobile/core/connectivity/connectivity_bloc.dart';
+import 'package:lumenmobile/core/network/connectivity_service.dart';
 
 class MockConnectivityService extends Mock implements ConnectivityService {}
 

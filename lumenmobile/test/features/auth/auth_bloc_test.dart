@@ -2,10 +2,10 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'package:aiomobile/core/error/failures.dart';
-import 'package:aiomobile/features/auth/domain/entities/user.dart';
-import 'package:aiomobile/features/auth/domain/usecases/login_usecase.dart';
-import 'package:aiomobile/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:lumenmobile/core/error/failures.dart';
+import 'package:lumenmobile/features/auth/domain/entities/user.dart';
+import 'package:lumenmobile/features/auth/domain/usecases/login_usecase.dart';
+import 'package:lumenmobile/features/auth/presentation/bloc/auth_bloc.dart';
 
 class MockLoginUseCase extends Mock implements LoginUseCase {}
 

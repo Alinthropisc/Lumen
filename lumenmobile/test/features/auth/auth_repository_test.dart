@@ -1,11 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'package:aiomobile/core/error/exceptions.dart';
-import 'package:aiomobile/core/error/failures.dart';
-import 'package:aiomobile/features/auth/data/datasources/auth_remote_datasource.dart';
-import 'package:aiomobile/features/auth/data/models/auth_response.dart';
-import 'package:aiomobile/features/auth/data/repositories/auth_repository_impl.dart';
+import 'package:lumenmobile/core/error/exceptions.dart';
+import 'package:lumenmobile/core/error/failures.dart';
+import 'package:lumenmobile/features/auth/data/datasources/auth_remote_datasource.dart';
+import 'package:lumenmobile/features/auth/data/models/auth_response.dart';
+import 'package:lumenmobile/features/auth/data/repositories/auth_repository_impl.dart';
 
 class MockAuthRemoteDataSource extends Mock implements AuthRemoteDataSource {}
 
