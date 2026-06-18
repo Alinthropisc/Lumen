@@ -1,16 +1,16 @@
-name: CI — aiomini
+name: CI — lumenmini
 
 on:
   push:
     paths:
-      - "aiomini/**"
+      - "lumenmini/**"
       - "packages/**"
-      - ".github/workflows/aiomini.yml"
+      - ".github/workflows/lumenmini.yml"
   pull_request:
     paths:
-      - "aiomini/**"
+      - "lumenmini/**"
       - "packages/**"
-      - ".github/workflows/aiomini.yml"
+      - ".github/workflows/lumenmini.yml"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -32,10 +32,10 @@ jobs:
         run: npm ci
 
       - name: Lint
-        run: npm run lint --workspace=aiomini --if-present
+        run: npm run lint --workspace=lumenmini --if-present
 
       - name: Test
-        run: npm run test --workspace=aiomini --if-present
+        run: npm run test --workspace=lumenmini --if-present
 
       - name: Build
-        run: npm run build --workspace=aiomini --if-present
+        run: npm run build --workspace=lumenmini --if-present

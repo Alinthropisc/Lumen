@@ -1,16 +1,16 @@
-name: CI — aiofront
+name: CI — lumenfront
 
 on:
   push:
     paths:
-      - "aiofront/**"
+      - "lumenfront/**"
       - "packages/**"
-      - ".github/workflows/aiofront.yml"
+      - ".github/workflows/lumenfront.yml"
   pull_request:
     paths:
-      - "aiofront/**"
+      - "lumenfront/**"
       - "packages/**"
-      - ".github/workflows/aiofront.yml"
+      - ".github/workflows/lumenfront.yml"
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -32,10 +32,10 @@ jobs:
         run: npm ci
 
       - name: Lint
-        run: npm run lint --workspace=aiofront --if-present
+        run: npm run lint --workspace=lumenfront --if-present
 
       - name: Test
-        run: npm run test --workspace=aiofront --if-present
+        run: npm run test --workspace=lumenfront --if-present
 
       - name: Build
-        run: npm run build --workspace=aiofront --if-present
+        run: npm run build --workspace=lumenfront --if-present
