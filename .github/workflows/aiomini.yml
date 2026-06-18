@@ -1,0 +1,41 @@
+name: CI — aiomini
+
+on:
+  push:
+    paths:
+      - "aiomini/**"
+      - "packages/**"
+      - ".github/workflows/aiomini.yml"
+  pull_request:
+    paths:
+      - "aiomini/**"
+      - "packages/**"
+      - ".github/workflows/aiomini.yml"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  test:
+    name: Lint, Test & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint --workspace=aiomini --if-present
+
+      - name: Test
+        run: npm run test --workspace=aiomini --if-present
+
+      - name: Build
+        run: npm run build --workspace=aiomini --if-present

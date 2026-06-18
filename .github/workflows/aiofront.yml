@@ -1,0 +1,41 @@
+name: CI — aiofront
+
+on:
+  push:
+    paths:
+      - "aiofront/**"
+      - "packages/**"
+      - ".github/workflows/aiofront.yml"
+  pull_request:
+    paths:
+      - "aiofront/**"
+      - "packages/**"
+      - ".github/workflows/aiofront.yml"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  test:
+    name: Lint, Test & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint --workspace=aiofront --if-present
+
+      - name: Test
+        run: npm run test --workspace=aiofront --if-present
+
+      - name: Build
+        run: npm run build --workspace=aiofront --if-present
